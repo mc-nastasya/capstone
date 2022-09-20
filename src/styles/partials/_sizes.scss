@@ -5,10 +5,10 @@ $desktop-breakpoint: 1440px;
     @media screen and (min-width: $tablet-breakpoint) {
       @content;
     }
-  }
+}
   
-  @mixin desktop {
+@mixin desktop {
     @media screen and (min-width: $desktop-breakpoint) {
       @content;
     }
-  }
+}
