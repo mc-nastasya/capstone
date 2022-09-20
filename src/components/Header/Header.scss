@@ -1,10 +1,21 @@
 @use "../../styles//partials/colors" as *;
-
+@use '../../styles/partials/sizes' as *;
 
 .header {
-    background-color: $background;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
+
+    @include tablet {
+        padding: 12px 36px;
+    }
+
+    &__burger-icon {
+        @include tablet {
+            display: none;
+        }
+    }
+
 }

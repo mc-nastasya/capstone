@@ -1,0 +1,19 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+
+.nav-bar {
+    display: none;
+    
+    @include tablet {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__link {
+        color: $accent-text;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 9px;
+    }
+}

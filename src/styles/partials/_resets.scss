@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @use "./fonts" as *;
+@use './sizes' as *;
 
 *,
 *::before,
@@ -17,21 +18,46 @@ body {
 }
 
 h1 {
-    font-size: 28pt;
+    font-size: 36px;
     font-weight: 600;
+
+    @include desktop {
+        font-size: 48px;
+    }
 }
 
 h2 {
-    font-size: 20pt;
+    font-size: 28px;
     font-weight: 600;
+
+    @include desktop {
+        font-size: 36px;
+    }
 }
 
 h3 {
-    font-size: 16pt;
+    font-size: 18px;
     font-weight: 500;
+
+    @include tablet {
+        font-size: 21px;
+    }
+
+    @include desktop {
+        font-size: 24px;
+    }
 }
 
 h4 {
-    font-size: 14pt;
+    font-size: 16px;
     font-weight: 500;
+
+    @include tablet {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    @include tablet {
+        font-size: 21px;
+    }
 }
