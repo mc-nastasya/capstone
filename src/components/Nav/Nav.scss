@@ -1,0 +1,29 @@
+@use '../../styles/partials/colors' as *;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 82px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    &__sub-title {
+        color: $accent-text;
+    }
+
+    &__social {
+        display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+}
