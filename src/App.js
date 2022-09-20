@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import './App.scss';
+import HomePage from "./pages/HomePage";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
    <BrowserRouter>
     <Header />
     <Routes>
-      <Route to="/"/>
+      <Route path="/" element={<HomePage />}/>
     </Routes>
    </BrowserRouter>
   );
