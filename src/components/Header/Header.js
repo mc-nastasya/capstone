@@ -5,6 +5,7 @@ import Cross from "../../assets/icons/cross.svg";
 import { useState } from "react";
 import Nav from "../Nav/Nav";
 import NavBar from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +21,7 @@ function Header() {
         <>
             <div className="header">
                 <div className="header__left">
-                    <img src={Logo} alt='logo' className="header__logo"/>
+                    <Link to='/'><img src={Logo} alt='logo' className="header__logo"/></Link>
                 </div>
                 <div className="header__right">
                     <img src={!menu ? MenuLogo : Cross} onClick={handleClick} alt="menu-burger" className="header__burger-icon" />

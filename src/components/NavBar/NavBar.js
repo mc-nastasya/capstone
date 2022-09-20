@@ -5,16 +5,16 @@ import './NavBar.scss';
 function NavBar() {
   return (
     <nav className='nav-bar'>
-        <NavLink className='nav-bar__link'>
+        <NavLink to='/books' className='nav-bar__link'>
             Books
         </NavLink>
-        <NavLink className='nav-bar__link'>
+        <NavLink to='/about' className='nav-bar__link'>
             About Eva
         </NavLink>
-        <NavLink className='nav-bar__link'>
+        <NavLink to='/FAQ' className='nav-bar__link'>
             Author FAQ
         </NavLink>
-        <NavLink className='nav-bar__link'>
+        <NavLink to='contacts' className='nav-bar__link'>
             Contact
         </NavLink>
     </nav>
