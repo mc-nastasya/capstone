@@ -1,8 +1,9 @@
+import AboutPreview from "../components/AboutPreview/AboutPreview";
 
 function HomePage() {
   return (
     <>
-        <h1>HomePage</h1>
+        <AboutPreview />
     </>
   )
 }
