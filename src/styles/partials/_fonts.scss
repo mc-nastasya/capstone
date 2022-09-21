@@ -3,9 +3,9 @@
 
 @font-face{
     font-family: "Mail";
-    src: url("../../assets/fonts/Mali-MediumItalic.woff2") format("woff2"),
-        url("../../assets/fonts/Mali-MediumItalic.woff") format("woff"),
-        url("../../assets/fonts/Mali-MediumItalic.ttf") format("truetype");
+    src: url("../../assets/fonts/Mali-Regular.woff2") format("woff2"),
+        url("../../assets/fonts/Mali-Regular.woff") format("woff"),
+        url("../../assets/fonts/Mali-Regular.ttf") format("truetype");
     font-weight: 400;
 }
 
@@ -33,9 +33,9 @@
 
 @font-face{
     font-family: "Mail";
-    src: url("../../assets/fonts/Mali-Regular.woff2") format("woff2"),
-        url("../../assets/fonts/Mali-Regular.woff") format("woff"),
-        url("../../assets/fonts/Mali-Regular.ttf") format("truetype");
+    src: url("../../assets/fonts/Mali-MediumItalic.woff2") format("woff2"),
+        url("../../assets/fonts/Mali-MediumItalic.woff") format("woff"),
+        url("../../assets/fonts/Mali-MediumItalic.ttf") format("truetype");
     font-weight: 500;
     font-style: italic;
 }

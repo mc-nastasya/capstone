@@ -16,7 +16,7 @@ function AboutPreview() {
         </div>
         <div className='author__right'>
             <h1 className='author__name'>Eva Solska</h1>
-            <p className='author__quote'>
+            <p className='author__text'>
                 Children’s writer, storyteller and traveller, 
                 founder of the writing community «Geek Writers» 
                 (Kharkiv) and the club of travelling writers 

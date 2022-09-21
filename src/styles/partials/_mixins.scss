@@ -45,3 +45,35 @@
         font-size: 16px;
     }
 }
+
+@mixin primary-btn {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin secondary-btn {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin input-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin input-placeholder {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin button {
+    border-radius: 12px;
+    text-decoration: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    @include tablet {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
