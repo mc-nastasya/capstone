@@ -8,7 +8,7 @@
     background-image: url("../../assets/images/Daisies.png");
     background-repeat: no-repeat, repeat;
     background-position: top 0 left 12px;
-    background-size: 360px;
+    background-size: 85%;
 
     &__left {
         display: flex;
@@ -17,7 +17,7 @@
     }
 
     &__image {
-        width: 200px;
+        width: 50%;
     }
 
     &__quote {
@@ -32,12 +32,17 @@
     }
 
     &__text {
-        @include p2;
+        @include p1;
+        line-height: 24px;
     }
 
     &__read-more {
+        display: block;
         background-color: $accent-1;
         color: $background;
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 24px;
         @include button;
     }
 }
