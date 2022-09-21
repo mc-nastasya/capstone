@@ -1,0 +1,99 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.email-form {
+
+
+    &__top {
+        height: 3rem;
+        padding: 0 16px;
+    }
+
+    &__bottom {
+        background-color: $white;
+        display: grid;
+        grid-template-columns: 1.21fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+			"title  hedgehog-mobile"
+			"description description"
+			"form form";
+
+        padding: 0 16px;
+    }
+
+    &__title {
+        grid-area: title;
+        color: $accent-4;
+        align-self: flex-end;
+        margin: 0;
+    }
+
+    &__image-mobile {
+        grid-area: hedgehog-mobile;
+        width: 100%;
+        margin-top: -3rem;
+
+        @include tablet{
+            display: none;
+        }
+        
+    }
+
+    &__description {
+        grid-area: description;
+        @include p1;
+        margin: 8px 0 36px;
+    }
+
+    &__form {
+        grid-area: form;
+        display: grid;
+        gap: 16px;
+        padding-bottom: 94px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid $secondary-text-1;
+        border-radius: 12px;
+        position: relative;
+        outline: 0;
+
+        &:hover, &:focus{
+            border: 1px solid $accent-text;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @include button;
+        border: 0;
+        outline: 0;
+        background-color: $accent-4;
+        color: $white;
+        @include secondary-btn;
+    }
+
+    &__label {
+        margin-top: -.85rem;
+        margin-left: .7rem;
+        background-color:white;
+        position: absolute;
+        z-index: 1;
+        @include input-label;
+        color: $secondary-text-1;
+        padding: .25rem;
+    }
+}
+
+*::placeholder {
+    font-family: 'Mail';
+    @include input-placeholder;
+    color: $secondary-text-1;
+    opacity: 0.3;
+}
+
