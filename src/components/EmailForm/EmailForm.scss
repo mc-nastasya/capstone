@@ -9,10 +9,18 @@
     &__top {
         height: 3rem;
         padding: 0 16px;
+
+        @include tablet {
+            height: 5rem;
+            padding: 0 36px;
+        }
+    }
+
+    &__bottom-background {
+        background-color: $white;
     }
 
     &__bottom {
-        background-color: $white;
         display: grid;
         grid-template-columns: 1.21fr 1fr;
         grid-template-rows: auto auto auto;
@@ -20,8 +28,23 @@
 			"title  hedgehog-mobile"
 			"description description"
 			"form form";
-
         padding: 0 16px;
+
+        @include tablet {
+            padding: 0 36px 2rem;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-areas: 
+			"hedgehog-not-mobile title "
+			"hedgehog-not-mobile description"
+			"hedgehog-not-mobile form";
+            gap: 12px;
+            @include desktop-center;
+        }
+
+        @include desktop {
+            padding: 0 0 3rem;
+            max-width: 1002px;
+        }
     }
 
     &__title {
@@ -29,6 +52,14 @@
         color: $accent-4;
         align-self: flex-end;
         margin: 0;
+
+        @include tablet {
+            margin: 1rem 0 0;
+        }
+
+        @include desktop {
+            margin-top: 3rem;
+        }
     }
 
     &__image-mobile {
@@ -42,10 +73,32 @@
         
     }
 
+    &__image-notmobile {
+        display: none;
+
+        @include tablet {
+            display: inline-block;
+            grid-area: hedgehog-not-mobile;
+            width: 100%;
+            margin-top: -3rem;
+        }
+
+        @include desktop {
+            padding-right: 51px;
+            margin-top: -6rem;
+        }
+    }
+
     &__description {
         grid-area: description;
         @include p1;
         margin: 8px 0 36px;
+
+        @include tablet {
+            margin: 0;
+            margin-bottom: 12px;
+            line-height: 150%;
+        }
     }
 
     &__form {
@@ -53,6 +106,17 @@
         display: grid;
         gap: 16px;
         padding-bottom: 94px;
+
+        @include tablet {
+            gap: 8px;
+        }
+
+        @include desktop {
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: 
+			"email-input subscribe-btn";
+            gap: 16px;
+        }
     }
 
     &__input {
@@ -66,6 +130,12 @@
         &:hover, &:focus{
             border: 1px solid $accent-text;
         }
+
+        @include desktop {
+            grid-area: email-input;
+            padding: 8px;
+            max-height: 52px;
+        }
     }
 
     &__button {
@@ -76,6 +146,11 @@
         background-color: $accent-4;
         color: $white;
         @include secondary-btn;
+
+        @include desktop {
+            grid-area: subscribe-btn;
+            max-height: 52px;
+        }
     }
 
     &__label {
@@ -87,6 +162,8 @@
         @include input-label;
         color: $secondary-text-1;
         padding: .25rem;
+
+        
     }
 }
 
