@@ -10,23 +10,32 @@ function Footer() {
     <div className="footer__background">
         <img src={PaperTexture} alt='background texture' className="footer__texture"/>
         <div className="footer">
+            <Link className="footer__logo-link" to='/'><img src={FooterLogo} alt='logo' className="footer__logo" /></Link>
             <div className="footer__top">
-                  <Link to='/'><img src={FooterLogo} alt='logo' className="footer__logo" /></Link>
-                  <Link className="footer__link" to='/books'><h3 className="footer__nav-item">Books</h3></Link>
-                  <Link className="footer__link"><h4 className="footer__nav-subitem">Upcoming Trilogy</h4></Link>
-                  <Link className="footer__link"><h4 className="footer__nav-subitem">Picture Books & Middle Grade</h4></Link>
+                  <div className="footer__list-container">
+                    <Link className="footer__link" to='/books'><h3 className="footer__nav-item">Books</h3></Link>
+                    <Link className="footer__link"><h4 className="footer__nav-subitem">Upcoming Trilogy</h4></Link>
+                    <Link className="footer__link"><h4 className="footer__nav-subitem">Picture Books & Middle Grade</h4></Link>
                   <Link className="footer__link"><h4 className="footer__nav-subitem">Young Adult</h4></Link>
-                  <Link className="footer__link"><h3 className="footer__nav-item">About Eva</h3></Link>
-                  <Link className="footer__link"><h3 className="footer__nav-item">Author FAQ</h3></Link>
-                  <Link className="footer__link"><h3 className="footer__nav-item">Contact Eva</h3></Link>
-                  <div className="footer__social">
-                    <img src={Instagram} alt='instagram logo' className="footer__social-icon"/>
-                    <img src={Facebook} alt='facebook logo' className="footer__social-icon"/>
+                  </div>
+                  <div className="footer__list-container">
+                    <Link className="footer__link"><h3 className="footer__nav-item">About Eva</h3></Link>
+                    <Link className="footer__link"><h3 className="footer__nav-item">Author FAQ</h3></Link>
+                    <Link className="footer__link"><h3 className="footer__nav-item">Contact Eva</h3></Link>
+                  </div>
+                  <div className="footer__social-container">
+                    <Link className="footer__logo-link-not-mobile" to='/'><img src={FooterLogo} alt='logo' className="footer__logo-not-mobile" /></Link>
+                    <div className="footer__social">
+                      <img src={Instagram} alt='instagram logo' className="footer__social-icon"/>
+                      <img src={Facebook} alt='facebook logo' className="footer__social-icon"/>
+                    </div>
                   </div>
             </div>
             <div className="footer__bottom">
+              <div className="footer__privacy-container">
                 <p className="footer__privacy">privacy policy</p>
                 <p className="footer__privacy">terms & conditions</p>
+              </div>
                 <p className="footer__owner">©️ Eva Solska | 2022</p>
             </div>
         </div>

@@ -12,6 +12,15 @@
     align-items: center;
     color: $white;
 
+    @include tablet {
+        padding: 42px 36px 0px;
+    }
+
+    @include desktop {
+        padding: 42px 0 0;
+        @include desktop-center;
+    }
+
 
     &__background {
         background-color: $accent-3;
@@ -36,6 +45,12 @@
         width: 100%;
         border-bottom: 1px solid $white;
 
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
     }
 
     &__bottom {
@@ -45,10 +60,46 @@
         z-index: 2;
         padding: 2rem 0 0;
 
+        @include tablet {
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            padding: 2.5rem 0;
+        }
+
     }
 
     &__logo {
         height: 64px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__logo-link {
+        z-index: 2;
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__logo-not-mobile {
+        display: none;
+        height: 64px;
+
+        @include tablet {
+            display: inline-block;
+        }
+    }
+
+    &__list-container {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+        }
     }
 
     &__link {
@@ -58,25 +109,69 @@
 
     &__nav-item {
         margin: 12px 0;
+        @include tablet {
+            margin: 0 0 20px;
+        }
     }
 
     &__nav-subitem {
         color: rgba(255, 255, 255, 0.7);
         margin: 6px 0;
 
+        @include tablet {
+            font-size: 18px;
+            margin: 9px 0;
+        }
+    }
+
+    &__social-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
     }
 
     &__social {
         display: flex;
         gap: 30px;
         margin: 2rem 0;
+
+        @include desktop {
+            margin: 0;
+            margin-right: 172px;
+        }
+    }
+
+    &__social-icon {
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__privacy-container {
+        text-align: center;
+
+        @include tablet {
+            text-align: end
+        }
     }
 
     &__privacy, &__owner {
         @include p3;
+
     }
 
     &__owner {
         margin: 2rem 0;
+
+        @include tablet {
+            @include p3;
+        }
     }
 }
