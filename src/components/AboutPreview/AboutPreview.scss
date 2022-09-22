@@ -91,6 +91,7 @@
         text-align: center;
         margin-top: 24px;
         @include button;
+        @include primary-btn;
 
         @include tablet {
             width: 244px;
