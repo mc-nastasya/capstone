@@ -1,5 +1,6 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import BookCard from "../BookCard/BookCard";
 import "./BooksPreview.scss";
 
@@ -18,11 +19,17 @@ function BooksPreview() {
     //    return <p>loading</p>
     // }
   return (
-    <div>
-        {/* <h1>hello</h1> */}
-        {/* {books.map((book)=>{ */}
-        <BookCard/>
-        {/* })} */}
+    <div className="books-preview__background">
+        <div className="books-preview">
+            <h1 className="books-preview__title">Books</h1>
+            <div className="books-preview__products">
+                <BookCard/>
+                <BookCard/>
+                <BookCard/>
+                <BookCard/>
+            </div>
+            <Link className="books-preview__link">See all books</Link>
+        </div>
     </div>
   )
 }

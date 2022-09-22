@@ -4,7 +4,7 @@
 @use '../../styles/partials/fonts' as *;
 
 .book {
-    width: 272px;
+    min-width: 272px;
     padding: 1rem;
     background-color: $white;
     border-radius: 16px;
@@ -19,16 +19,16 @@
 
     &__title {
         text-align: center;
+        white-space: pre-wrap;
     }
 
     &__link {
+        @include button;
+        @include secondary-btn;
         display: block;
-        text-decoration: none;
         text-align: center;
         color: $accent-3;
         width: 100%;
-        padding: 12px 24px;
-        border-radius: 12px;
         border: 1px solid $accent-3;
     }
 }
