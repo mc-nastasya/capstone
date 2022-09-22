@@ -29,11 +29,9 @@
 }
 
 @mixin p3 {
-    @include desktop {
         font-weight: 400;
         font-size: 14px;
         margin: 8px 0;
-    }
 }
 
 @mixin quote {

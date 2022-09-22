@@ -1,0 +1,82 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.footer {
+
+    padding: 35px 16px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+
+
+    &__background {
+        background-color: $accent-3;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    &__texture {
+        position: absolute;
+        opacity: 20%;
+        mix-blend-mode: overlay;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        width: 100%;
+        border-bottom: 1px solid $white;
+
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        padding: 2rem 0 0;
+
+    }
+
+    &__logo {
+        height: 64px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+
+    &__nav-item {
+        margin: 12px 0;
+    }
+
+    &__nav-subitem {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 6px 0;
+
+    }
+
+    &__social {
+        display: flex;
+        gap: 30px;
+        margin: 2rem 0;
+    }
+
+    &__privacy, &__owner {
+        @include p3;
+    }
+
+    &__owner {
+        margin: 2rem 0;
+    }
+}
