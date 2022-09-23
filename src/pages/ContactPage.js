@@ -5,7 +5,7 @@ import EmailForm from "../components/EmailForm/EmailForm";
 function ContactPage() {
   return (
     <>
-        <ContactFormContainer />
+        <ContactFormContainer title="Contact" />
         <EmailForm />
     </>
   )
