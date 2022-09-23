@@ -6,10 +6,18 @@
 .faq-card {
     padding: 16px;
     background-color: $white;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
     border-radius: 24px;
+
+    @include tablet {
+        padding: 24px;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr 1.25fr;
+        gap: 3rem;
+    }
 
     &__title, &__text {
         margin: 0;

@@ -14,9 +14,19 @@
         margin-bottom: 5rem;
     }
 
+    @include desktop {
+        padding: 0;
+        @include desktop-center;
+        gap: 2.25rem;
+    }
+
     &__title {
         text-align: center;
         color: $accent-2;
         margin: 1rem 0 0;
+
+        @include desktop {
+            margin-bottom: .7rem;
+        }
     }
 }
