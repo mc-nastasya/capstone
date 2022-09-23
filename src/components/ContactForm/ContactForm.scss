@@ -17,14 +17,27 @@
     }
 
     &__title {
-        color: $accent-2;
         margin-bottom: 3rem;
+        text-align: center;
 
         @include tablet {
+            text-align: left;
             margin-top: 0;
             margin-bottom: 1.5rem;
         }
 
+    }
+
+    &__accent-2 {
+        color: $accent-2;
+    }
+
+    &__accent-3 { 
+        color: $accent-3;
+    }
+
+    &__accent-4 {
+        color: $accent-4;
     }
 
     &__form {

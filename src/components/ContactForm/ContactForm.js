@@ -1,9 +1,9 @@
 import "./ContactForm.scss";
 
-function ContactForm({title}) {
+function ContactForm({title, color}) {
   return (
     <div className="form">
-        <h1 className="form__title">{title}</h1>
+        <h1 className={`form__title form__${color}`}>{title}</h1>
         <form className="form__form">
             <div className="form__name-container form__input-pair">
                 <label className="form__label"> First Name*</label>
