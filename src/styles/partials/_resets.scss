@@ -1,6 +1,7 @@
 @use "./colors" as *;
 @use "./fonts" as *;
 @use './sizes' as *;
+@use './mixins' as *;
 
 *,
 *::before,
@@ -60,4 +61,11 @@ h4 {
     @include tablet {
         font-size: 21px;
     }
+}
+
+
+*::placeholder {
+    @include input-placeholder;
+    color: $secondary-text-1;
+    opacity: 0.3;
 }

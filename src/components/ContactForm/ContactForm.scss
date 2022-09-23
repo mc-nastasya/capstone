@@ -11,9 +11,20 @@
     flex-direction: column;
     align-items: center;
 
+    @include tablet {
+        padding: 0;
+        align-items: flex-start;
+    }
+
     &__title {
         color: $accent-2;
         margin-bottom: 3rem;
+
+        @include tablet {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
     }
 
     &__form {
@@ -35,7 +46,6 @@
         position: relative;
         outline: 0;
         background-color: $background;
-        // margin-bottom: 1rem;
         @include input-placeholder;
 
         &:hover, &:focus{
@@ -67,5 +77,9 @@
         outline: 0;
         border: 0;
         margin: 1rem 0;
+
+        @include tablet {
+            margin: 0;
+        }
     }
 }

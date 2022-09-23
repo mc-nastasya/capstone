@@ -1,15 +1,13 @@
-import ContactForm from "../components/ContactForm/ContactForm"
-import EmailForm from "../components/EmailForm/EmailForm"
-import Profile from "../components/Profile/Profile"
+import ContactFormContainer from "../components/ContactFormContainer/ContactFormContainer";
+import EmailForm from "../components/EmailForm/EmailForm";
 
 
 function ContactPage() {
   return (
-    <div>
-        <Profile />
-        <ContactForm title = "Contact"/>
+    <>
+        <ContactFormContainer />
         <EmailForm />
-    </div>
+    </>
   )
 }
 
