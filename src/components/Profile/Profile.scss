@@ -10,14 +10,14 @@
     align-items: center;
     gap: 16px;
 
-    @include tablet {
-        padding: 24px 36px;
-    }
+    // @include tablet {
+    //     padding: 24px 36px;
+    // }
 
-    @include desktop {
-        padding: 24px 0;
-        @include desktop-center;
-    }
+    // @include desktop {
+    //     padding: 24px 0;
+    //     @include desktop-center;
+    // }
 
     &__background {
         background-image: url("../../assets/images/Daisies.png");

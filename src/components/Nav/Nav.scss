@@ -10,6 +10,7 @@
     bottom: 0;
     left: 0;
     background-color: $background;
+    z-index: 3;
 
     &__container {
         display: flex;

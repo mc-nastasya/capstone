@@ -1,0 +1,71 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+
+.form {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        color: $accent-2;
+        margin-bottom: 3rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    &__input, &__text, &__button {
+        width: 100%;
+    }
+
+    &__input, &__text {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid $secondary-text-1;
+        border-radius: 12px;
+        position: relative;
+        outline: 0;
+        background-color: $background;
+        // margin-bottom: 1rem;
+        @include input-placeholder;
+
+        &:hover, &:focus{
+            border: 1px solid $accent-text;
+        }
+    }
+
+    &__text {
+        resize: none;
+        height: 7.5rem;
+    }
+
+    &__label {
+        margin-top: -.85rem;
+        margin-left: .7rem;
+        background-color: $background;
+        position: absolute;
+        z-index: 1;
+        @include input-label;
+        color: $secondary-text-1;
+        padding: .25rem;
+    }
+
+    &__button {
+        @include button;
+        @include primary-btn;
+        background-color: $accent-1;
+        color: $background;
+        outline: 0;
+        border: 0;
+        margin: 1rem 0;
+    }
+}
