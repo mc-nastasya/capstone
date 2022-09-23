@@ -21,8 +21,7 @@
         background-size: 110%;
 
         @include tablet {
-            background-size: 43%;
-            background-position: left 0 ;
+            background-image: none;
         }
 
     }

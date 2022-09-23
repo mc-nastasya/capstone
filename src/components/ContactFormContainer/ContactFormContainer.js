@@ -4,9 +4,11 @@ import './ContactFormContainer.scss';
 
 function ContactFormContainer() {
   return (
-    <div className='container'>
-        <Profile />
-        <ContactForm title="Contact" />
+    <div className='container__background'>
+      <div className='container'>
+          <Profile />
+          <ContactForm title="Contact" />
+      </div>
     </div>
   )
 }

@@ -7,6 +7,25 @@
         grid-template-columns: 1fr 1.5fr;
         gap: 24px;
         padding: 0 2.25rem 5rem;
+    }
 
+    @include desktop {
+        padding: 3rem 0 5rem;
+        @include desktop-center;
+        gap: 139px;
+
+    }
+
+    &__background {
+        @include tablet {
+            background-image: url("../../assets/images/Daisies.png");
+            background-repeat: no-repeat, no-repeat;
+            background-size: 60%;
+            background-position: left -50px top 20px;
+        }
+
+        @include desktop {
+            background-size: 55%;
+        }
     }
 }
