@@ -9,6 +9,11 @@
     padding: 0 1rem;
     margin-bottom: 3rem;
 
+    @include tablet {
+        padding: 0 2.25rem;
+        margin-bottom: 5rem;
+    }
+
     &__title {
         text-align: center;
         color: $accent-2;
