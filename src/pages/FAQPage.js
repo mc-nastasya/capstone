@@ -1,9 +1,11 @@
 import ContactFormContainer from "../components/ContactFormContainer/ContactFormContainer"
+import FAQSection from "../components/FAQSection/FAQSection"
 
 function FAQPage() {
   return (
     <>
-    <ContactFormContainer title="Another question?" color="accent-4" />
+        <FAQSection />
+        <ContactFormContainer title="Another question?" color="accent-4" />
     </>
   )
 }

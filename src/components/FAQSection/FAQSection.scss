@@ -1,0 +1,17 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.faq {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+
+    &__title {
+        text-align: center;
+        color: $accent-2;
+        margin: 1rem 0 0;
+    }
+}
