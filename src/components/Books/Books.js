@@ -17,6 +17,9 @@ function Books() {
                 <Book />
                 <Book />
                 <Book />
+                <Book />
+                <Book />
+                <Book />
               </div>
             </div>
       </div>

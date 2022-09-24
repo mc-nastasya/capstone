@@ -11,7 +11,13 @@
     gap: 1rem;
 
     @include tablet {
-        padding: 2rem 2.25rem 1rem;
+        padding: 2rem 2.25rem 4rem;
+    }
+
+    @include desktop {
+        padding-left: 0;
+        padding-right: 0;
+        @include desktop-center;
     }
 
     &__background {
@@ -21,6 +27,10 @@
 
         @include tablet {
             background-position: left -80px top 0;
+        }
+
+        @include desktop {
+            background-position: left -40px top 0;
         }
     }
     
@@ -34,6 +44,10 @@
 
         @include tablet {
             width: fit-content;
+        }
+
+        @include desktop {
+            align-self: flex-end;
         }
     }
 
@@ -51,6 +65,10 @@
             padding: .5rem 12px;
         }
 
+        @include desktop {
+            margin: 0;
+        }
+
 
         &--active {
             color: $background;
@@ -63,5 +81,14 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+
+        @include tablet {
+            gap:24px;
+        }
+
+        @include desktop {
+            gap: 36px;
+            justify-content: space-between;
+        }
     }
 }
