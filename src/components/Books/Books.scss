@@ -1,0 +1,43 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.books {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    &__nav-bar {
+        display: flex;
+        border-radius: 12px;
+        gap: 8px;
+        background-color: $white;
+        padding: 8px;
+        width: 100%;
+    }
+
+    &__link {
+        @include p2;
+        text-align: center;
+        color: $accent-text;
+        width: 100%;
+        margin: 0;
+        padding: .5rem 0;
+        border-radius: 12px;
+
+
+        &--active {
+            color: $background;
+            background-color: $accent-3;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
