@@ -1,0 +1,66 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.not-found {
+    padding: 0 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+
+    &__background {
+        background-image: 
+            url("../../assets/images/Rectangle-1.png"), 
+            url("../../assets/images/Rectangle-2.png"),
+            url("../../assets/images/Rectangle-3.png"),
+            url("../../assets/images/Rectangle.png");
+        background-size: 220px, 250px, 280px, 230px;
+        background-repeat: no-repeat;
+        background-position: 
+            right -50px bottom 0, 
+            right -30px top 0, 
+            left -50px bottom 0,
+            left -50px top 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 150px;
+        line-height: 100%;
+        margin: 0;
+        color: $accent-3;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__links {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        padding: 1rem;
+    }
+
+    &__link {
+        width: 50%;
+        @include button;
+        text-align: center;
+
+        &--primary {
+            @include primary-btn;
+            color: $background;
+            background-color: $accent-2;
+        }
+
+        &--secondary {
+            @include secondary-btn;
+            color: $accent-2;
+            background-color: $background;
+            border: 1px solid $accent-2;
+        }
+    }
+}
