@@ -13,7 +13,10 @@
 
     @include tablet {
         height: 100vh;
+    }
 
+    @include desktop {
+        height: 87vh;
     }
 
     &__background {
@@ -38,6 +41,15 @@
                 left 0 bottom 0,
                 left -30px top 0;
         }
+
+        @include desktop {
+            background-size: 480px, 530px, 550px, 480px;
+            background-position: 
+                right 0 bottom 0, 
+                right 0 top 0, 
+                left 0 bottom 0,
+                left 0px top 0;
+        }
     }
 
     &__title {
@@ -56,6 +68,12 @@
         text-align: center;
         max-width: 360px;
         margin: 0;
+
+        @include desktop {
+            max-width: 385px;
+            margin: .5rem 0;
+
+        }
     }
 
     &__links {
