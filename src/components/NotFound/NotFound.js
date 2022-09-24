@@ -7,7 +7,7 @@ function NotFound() {
         <div className='not-found'>
             <h1 className='not-found__title'>404</h1>
             <h3 className='not-found__text'>
-                Ooops! Something went wrong :(((
+                Ooops! Something went wrong :(
                 But we are already figuring it out.
                 Thank you for your patience!
             </h3>
