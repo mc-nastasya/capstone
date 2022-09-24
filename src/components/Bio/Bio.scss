@@ -1,0 +1,43 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.bio {
+    padding: 0 1rem;
+
+    &__image-container {
+
+        padding: 2rem 0 3rem;
+
+        background-image: url("../../assets/images/bg-pattern-leaves.png");
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position: top 10px left -20px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 65%;
+    }
+
+    &__general {
+        margin-top: -1rem;
+    }
+
+    &__name {
+        margin: 0;
+        color: $accent-4;
+    }
+
+    &__description {
+        @include quote;
+        line-height: 150%;
+    }
+
+    &__divider {
+        width: 100%;
+    }
+}

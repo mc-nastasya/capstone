@@ -25,16 +25,16 @@
             url("../../assets/images/Rectangle-2.png"),
             url("../../assets/images/Rectangle-3.png"),
             url("../../assets/images/Rectangle.png");
-        background-size: 220px, 250px, 280px, 230px;
+        background-size: 220px, 230px, 250px, 170px;
         background-repeat: no-repeat;
         background-position: 
             right -50px bottom 0, 
             right -30px top 0, 
             left -50px bottom 0,
-            left -50px top 0;
+            left -20px top 0;
 
         @include tablet {
-            background-size: 300px, 350px, 340px, 330px;
+            background-size: 240px, 250px, 270px, 190px;
             background-position: 
                 right 0 bottom 0, 
                 right 0 top 0, 
@@ -43,7 +43,7 @@
         }
 
         @include desktop {
-            background-size: 480px, 530px, 550px, 480px;
+            background-size: 380px, 400px, 450px, 320px;
             background-position: 
                 right 0 bottom 0, 
                 right 0 top 0, 
