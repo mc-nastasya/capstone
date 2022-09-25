@@ -1,0 +1,42 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__nav {
+        margin: 0 1rem;
+        display: flex;
+        background-color: $white;
+        border-radius: 16px;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    &__link {
+        width: 50%;
+        text-align: center;
+        border-radius: 8px;
+        margin: 0;
+        padding: .5rem;
+
+        &--active {
+            background-color: $accent-1;
+            color: $white;
+        }
+    }
+
+    &__content {
+        padding: 0 1rem;
+        background-image: url('../../assets/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: 350px;
+        background-position: bottom 0 right -180px;
+        margin-bottom: 4rem;
+    }
+
+}

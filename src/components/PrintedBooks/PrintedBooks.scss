@@ -1,0 +1,20 @@
+@use "../../styles//partials/colors" as *;
+@use '../../styles/partials/sizes' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.printed-books {
+
+    &__list {
+        padding-inline-start: 1.5rem;
+        font-family: 'Mail';
+        list-style-type: none;
+    }
+
+    &__item {
+        @include p2;
+        margin: 1rem 0;
+        // list-style-image: url();
+    }
+
+}
