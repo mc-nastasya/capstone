@@ -10,9 +10,24 @@
     align-items: center;
     gap: 1rem;
 
+    @include tablet {
+        padding: 0 2.25rem 3rem;
+    }
+
+    @include desktop {
+        @include desktop-center;
+        width: 994px;
+        padding: 0 0 3rem;
+        gap: 1.5rem;
+    }
+
     &__title {
         color: $accent-2;
         margin: 0;
+
+        @include tablet {
+            margin-bottom: 1.25rem;
+        }
     }
 
     &__card {
@@ -34,8 +49,13 @@
     }
 
     &__text {
+        @include p1;
         margin: 0;
         width: 100%;
+
+        @include tablet {
+            margin: 0;
+        }
     }
 
 
