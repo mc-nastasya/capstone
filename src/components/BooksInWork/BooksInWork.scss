@@ -5,6 +5,11 @@
 
 .books-in-work {
 
+    @include desktop{
+        padding: 0;
+        @include desktop-center;
+    }
+
     &__container {
         margin-bottom: 1.5rem;
     }

@@ -9,12 +9,21 @@
         padding-inline-start: 1.5rem;
         font-family: 'Mail';
         list-style-type: none;
+
+        @include desktop{
+            padding: 0;
+            @include desktop-center;
+        }
     }
 
     &__item {
         @include p2;
         margin: 1rem 0;
         // list-style-image: url();
+
+        @include tablet {
+            @include p1;
+        }
     }
 
 }
