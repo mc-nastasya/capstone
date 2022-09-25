@@ -2,6 +2,7 @@ import './Bio.scss';
 import AuthorPhoto from '../../assets/images/photo.png';
 import Divider from '../../assets/images/divider.png';
 import Goblet from '../../assets/icons/goblet.svg';
+import FAQPreview from '../FAQPreview/FAQPreview';
 
 function Bio() {
   return (
@@ -68,6 +69,7 @@ function Bio() {
                 She currently lives in Kharkiv with her husband, 
                 daughter Khrystyna and cat Bonifatsii Romanovych.
             </p>
+            <FAQPreview />
         </div>
     </div>
   )
