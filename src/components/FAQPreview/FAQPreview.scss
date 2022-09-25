@@ -12,12 +12,25 @@
     border-radius: 16px;
     margin: 4rem 0;
 
+    @include desktop {
+        margin: 96px 0;
+        padding: 24px;
+    }
+
     &__text {
-        @include p2;
+        @include p1;
         line-height: 150%;
     }
     &__title, &__text {
         margin: 0;
+
+        @include tablet {
+            text-align: center;
+        }
+
+        @include desktop {
+            text-align: left
+        }
     }
 
     &__link {

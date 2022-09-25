@@ -6,6 +6,27 @@
 .bio {
     padding: 0 1rem;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 0 64px 2.25rem ;
+        gap: 24px;
+    }
+
+    @include desktop {
+        padding: 0;
+        gap: 103px;
+        @include desktop-center;
+    }
+
+    &__background {
+        @include desktop {
+            background-image: url("../../assets/images/bg-pattern-leaves.png");
+            background-repeat: no-repeat;
+            background-position: top 0 right -200px;
+        }
+    }
+
     &__image-container {
 
         padding: 2rem 0 3rem;
@@ -16,15 +37,42 @@
         background-position: top 10px left -20px;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        height: fit-content;
+
+        @include tablet {
+            background-size: 200%;
+            padding-right: 2.25rem;
+            padding-top: 24px;
+        }
+
+        @include desktop {
+            background-image: none;
+            padding-right: 0;
+            width: 40%;
+        }
     }
 
     &__image {
         width: 65%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__general {
         margin-top: -1rem;
+
+        @include tablet {
+            margin-top: 24px;
+        }
+
+        @include desktop {
+            width: 60%;
+        }
     }
 
     &__name {
@@ -64,5 +112,19 @@
     &__quote {
         @include quote;
         color: $secondary-text-1;
+    }
+
+    &__faq-mobile {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__faq-not-mobile {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
     }
 }
