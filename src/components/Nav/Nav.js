@@ -9,8 +9,6 @@ function Nav({handleClick}) {
     <div className="nav">
         <nav className="nav__container">
           <Link onClick={handleClick} to='/books' className="nav__link"><h2 className="nav__title">Books</h2></Link>
-          <Link onClick={handleClick} to='books/children' className="nav__link"><h3 className="nav__sub-title">Picture Books & Middle Grade</h3></Link>
-          <Link onClick={handleClick} to='books/young-adults' className="nav__link"><h3 className="nav__sub-title">Young Adult</h3></Link>
           <Link onClick={handleClick} to='/about' className="nav__link"><h2 className="nav__title">About Eva</h2></Link>
           <Link onClick={handleClick} to='/faq' className="nav__link"><h2 className="nav__title">Author FAQ</h2></Link>
           <Link onClick={handleClick} to='/contacts' className="nav__link"><h2 className="nav__title">Contact Eva</h2></Link>
