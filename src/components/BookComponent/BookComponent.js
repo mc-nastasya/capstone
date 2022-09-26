@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './BookComponent.scss';
 import Sova from '../../assets/images/DSC01579.jpg';
 
@@ -22,8 +21,8 @@ function BookComponent() {
                         How will Greg make up for his blunder and what role will the red maple leaf play in this story? You will learn about it if you read the story of Eva Solska «Greg and the maple leaf» with amazing illustrations of Katerina Zotova.
                     </p>
                     <div className='book-component__buttons'>
-                        <Link  className='book-component__link book-component__link--secondary'>Read Sample</Link>
-                        <Link  className='book-component__link book-component__link--primary'>Buy on Amazon</Link>
+                        <button className='book-component__link book-component__link--secondary'>Read Sample</button>
+                        <a href='' className='book-component__link book-component__link--primary'>Buy on Amazon</a>
                     </div>
                 </div>
             </div>

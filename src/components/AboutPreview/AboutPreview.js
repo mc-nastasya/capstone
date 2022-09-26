@@ -1,6 +1,8 @@
 import './AboutPreview.scss';
 import Portrait from "../../assets/images/portrait.png";
 import { Link } from 'react-router-dom';
+import {scrollToTop} from '../../utilities/utilities';
+
 
 function AboutPreview() {
   return (
@@ -39,7 +41,7 @@ function AboutPreview() {
                     of Public Administration and arranges fabulous parties 
                     with her writer friends.
                 </p>
-                <Link to='/about' className='author__read-more'>Read more about Eva</Link>
+                <Link to='/about' onClick={scrollToTop} className='author__read-more'>Read more about Eva</Link>
             </div>
         </div>
     </div>

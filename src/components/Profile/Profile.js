@@ -2,7 +2,6 @@ import "./Profile.scss";
 import Portrait from "../../assets/images/profilePhoto.png";
 import Facebook from '../../assets/icons/blueFacebok.svg';
 import Instagram from '../../assets/icons/blueInsta.svg';
-import { Link } from "react-router-dom";
 
 function Profile() {
   return (
@@ -18,8 +17,8 @@ function Profile() {
                 </p>
             </div>
             <div className="profile__bottom">
-                <Link><img src={Instagram} alt="instagram"/></Link>
-                <Link><img src={Facebook} alt="facebook"/></Link>
+                <a href='https://www.instagram.com/solskaeva/'><img src={Instagram} alt="instagram"/></a>
+                <a href='https://www.facebook.com/solskaeva'><img src={Facebook} alt="facebook"/></a>
             </div>
         </div>
     </div>

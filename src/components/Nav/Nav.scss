@@ -30,6 +30,10 @@
         margin: 12px 0;
     }
 
+    &__title {
+        color: $primary-text;
+    }
+
     &__sub-title {
         color: $accent-text;
     }
@@ -38,5 +42,9 @@
         display: flex;
         gap: 2rem;
         margin-top: 7rem;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 }

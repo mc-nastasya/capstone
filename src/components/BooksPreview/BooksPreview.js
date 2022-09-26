@@ -1,34 +1,37 @@
-// import axios from "axios";
-// import { useEffect, useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BookCard from "../BookCard/BookCard";
 import "./BooksPreview.scss";
+import {scrollToTop} from '../../utilities/utilities';
 
 function BooksPreview() {
 
-    // const [books, setBooks] = useState([]);
-    // useEffect(()=>{
-    //     axios
-    //         .get("http://localhost:8080/books")
-    //         .then((response)=>{
-    //             setBooks(response.data);
-    //         })
-    // }, [])
+  const [books, setBooks] = useState([]);
+  useEffect(()=>{
+      axios
+          .get("http://localhost:8080/books-preview")
+          .then((response)=>{
+              setBooks(response.data);
+          })
+  }, [])
 
-    // if(books === []) {
-    //    return <p>loading</p>
-    // }
+  if(books === []) {
+      return <p>loading</p>
+  }
+
   return (
     <div className="books-preview__background">
         <div className="books-preview">
             <h1 className="books-preview__title">Books</h1>
             <div className="books-preview__products">
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
+                {
+                  books.map((book)=>{
+                    return <BookCard key={book.id} book = {book}/>
+                  })
+                }
             </div>
-            <Link className="books-preview__link">See all books</Link>
+            <Link to='/books' onClick={scrollToTop} className="books-preview__link">See all books</Link>
         </div>
     </div>
   )

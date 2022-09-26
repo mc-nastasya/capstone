@@ -9,6 +9,9 @@
     padding: 1rem;
     background-color: $white;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &__cover {
         width: 100%;
