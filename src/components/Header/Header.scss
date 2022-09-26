@@ -3,11 +3,12 @@
 @use '../../styles/partials/mixins' as *;
 
 .header {
-    background-color: transparent;
+    background-color: $background;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
+    width: 100%;
 
     @include tablet {
         padding: 12px 36px;
@@ -24,4 +25,8 @@
         }
     }
 
+}
+
+.fixed {
+    position: fixed;
 }

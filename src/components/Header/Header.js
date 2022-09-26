@@ -17,11 +17,15 @@ function Header() {
         console.log(menu);
     }
 
+    const handleLogoClick = () => {
+        setMenu(false);
+    }
+
     return (
         <>
-            <div className="header">
+            <div className={`header ${menu? 'fixed' : null}`}>
                 <div className="header__left">
-                    <Link to='/'><img src={Logo} alt='logo' className="header__logo"/></Link>
+                    <Link to='/' onClick={handleLogoClick}><img src={Logo} alt='logo' className="header__logo"/></Link>
                 </div>
                 <div className="header__right">
                     <img src={!menu ? MenuLogo : Cross} onClick={handleClick} alt="menu-burger" className="header__burger-icon" />
