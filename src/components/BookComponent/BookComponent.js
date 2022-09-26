@@ -1,28 +1,43 @@
 import './BookComponent.scss';
-import Sova from '../../assets/images/DSC01579.jpg';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function BookComponent() {
+    const navigate = useNavigate();
+    const {id} = useParams();
+    const [selectedBook, setSelectedBook] = useState();
+
+    useEffect(()=>{
+        axios
+          .get(`http://localhost:8080/books/book/${id}`)
+          .then((response)=>{
+            setSelectedBook(response.data[0]);
+          }) 
+    }, [id])
+
+    if(!selectedBook) {
+        return <p>Loading...</p>
+    }
+    
   return (
     <div className='book-component__background'>
         <div className='book-component'>
             <div className='book-component__navigate'>
-                <p className='book-component__back'>Back</p>
+                <p onClick={()=>{navigate(-1)}} className='book-component__back'>Back</p>
             </div>
             <div className='book-component__info'>
                 <div className='book-component__top'>
-                    <img src={Sova} alt='book cover' className='book-component__cover'/>
+                    <img src={selectedBook.image} alt='book cover' className='book-component__cover'/>
                 </div>
                 <div className='book-component__content'>
-                    <h1 className='book-component__title'>Hedgehog and the maple leaf</h1>
+                    <h1 className='book-component__title'>{selectedBook.title}</h1>
                     <p className='book-component__description'>
-                        Little hedgehog Greg forgot to wish his mom happy birthday. But he loves his mother very much and he did not want to upset her!
-                    </p>
-                    <p className='book-component__description'>
-                        How will Greg make up for his blunder and what role will the red maple leaf play in this story? You will learn about it if you read the story of Eva Solska «Greg and the maple leaf» with amazing illustrations of Katerina Zotova.
+                        {selectedBook.description}
                     </p>
                     <div className='book-component__buttons'>
-                        <button className='book-component__link book-component__link--secondary'>Read Sample</button>
-                        <a href='' className='book-component__link book-component__link--primary'>Buy on Amazon</a>
+                        <a href={`http://localhost:3000/${selectedBook.sample_link}`} rel="noreferrer" target="_blank" className='book-component__link book-component__link--secondary'>Read Sample</a>
+                        <a href={`${selectedBook.amazon_link}`} className='book-component__link book-component__link--primary'>Buy on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -31,4 +46,4 @@ function BookComponent() {
   )
 }
 
-export default BookComponent
+export default BookComponent;

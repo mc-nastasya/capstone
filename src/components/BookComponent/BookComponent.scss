@@ -82,6 +82,11 @@
         padding-left: 1.5rem;
     }
 
+    &__back-link {
+        color: $primary-text;
+        text-decoration: none;
+    }
+
     &__cover {
         width: 100%;
         border-radius: 24px;
@@ -139,6 +144,7 @@
             @include secondary-btn;
             border: 1px solid $accent-2;
             color: $accent-2;
+            background-color: $background;
         }
     }
 

@@ -32,7 +32,7 @@ function Header() {
                     <NavBar />
                 </div>
             </div>
-            {menu? <Nav /> : null}
+            {menu? <Nav handleClick={handleClick}/> : null}
         </>
     )
 }

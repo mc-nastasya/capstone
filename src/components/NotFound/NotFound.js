@@ -15,7 +15,7 @@ function NotFound() {
                 Thank you for your patience!
             </h3>
             <div className='not-found__links'>
-                <Link onClick={navigate(-1)} className='not-found__link not-found__link--secondary'>Go Back</Link>
+                <Link onClick={()=>{navigate(-1)}} className='not-found__link not-found__link--secondary'>Go Back</Link>
                 <Link to='/' className='not-found__link not-found__link--primary'>Go to Main</Link>
             </div>
         </div>
