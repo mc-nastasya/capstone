@@ -8,6 +8,7 @@ import FAQPage from "./pages/FAQPage";
 import BooksPage from "./pages/BooksPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
+import BookPage from "./pages/BookPage";
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
       <Route path="/faq" element={<FAQPage />}/>
       <Route path="/contacts" element={<ContactPage />}/>
       <Route path="/books" element={<BooksPage />}/>
+      <Route path="/book/:id" element={<BookPage />} />
       <Route path="/*" element={<NotFoundPage />}/>
-
     </Routes>
     <Footer />
    </BrowserRouter>
