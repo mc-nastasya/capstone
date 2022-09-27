@@ -3,6 +3,7 @@ import HedgehogMob from '../../assets/images/hedgehog.png';
 import HedgehogNotMob from '../../assets/images/hedgehog-notmob.png';
 import { useState } from 'react';
 import axios from 'axios';
+import SuccessModal from '../SuccessModal/SuccessModal';
 
 function EmailForm() {
 
@@ -42,6 +43,7 @@ function EmailForm() {
 
     return (
         <div className='email-form'>
+          {!success? null: <SuccessModal heading1='Great!' heading2='You successfully subscribed' text='Eva will send you the most important news!' setSuccess={setSuccess}/>}
             <div className='email-form__top'></div>
             <div className='email-form__bottom-background'>
                 <div className='email-form__bottom'>

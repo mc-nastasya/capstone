@@ -35,6 +35,10 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
             setMessageValue(false);
         }
 
+        if(!message || !firstName || !email || !subject) {
+            return ;
+        }
+
         const newContact = {
             first_name: firstName,
             last_name: lastName,

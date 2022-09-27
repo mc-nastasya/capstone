@@ -167,12 +167,12 @@
     }
 
     &__error {
-        color: #EB5757;
+        color: $error;
         @include p2;
     }
 
     &__error-state{
-        border: 1px solid #EB5757;
+        border: 1px solid $error;
         background-image: url('../../assets/icons/error.svg');
         background-position: top 50% right .7rem;
         background-repeat: no-repeat;
