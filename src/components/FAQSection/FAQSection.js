@@ -9,7 +9,7 @@ function FAQSection() {
 
     useEffect(()=>{
         axios
-            .get(`http://localhost:8080/faq`)
+            .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/faq`)
             .then((response)=>{
                 setFaq(response.data);
             })

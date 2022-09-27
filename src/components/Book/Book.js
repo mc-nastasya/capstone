@@ -4,8 +4,7 @@ import {scrollToTop} from '../../utilities/utilities';
 import { Link} from "react-router-dom";
 
 function Book({book}) {
-    const description = "A little bear doesn’t like to go to bed. Every night he lies without sleep, and then wanders sad and tired all day. But one night a moth flies into his room and everything changes";
-
+    
   return (
     <div className="book">
         <img className="book__image" src={book.image} />

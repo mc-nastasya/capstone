@@ -28,7 +28,7 @@ function EmailForm() {
         };
 
         axios
-            .post('http://localhost:8080/email', newEmail)
+            .post(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/email`, newEmail)
             .then(()=>{
                 setSuccess(true);
                 event.target.email.value = "";

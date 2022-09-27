@@ -48,7 +48,7 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
         };
 
         axios
-            .post('http://localhost:8080/contact', newContact)
+            .post(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/contact`, newContact)
             .then(()=>{
                 setSuccess(true);
                 event.target.first_name.value = "";

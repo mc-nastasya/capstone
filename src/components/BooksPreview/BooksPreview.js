@@ -10,7 +10,7 @@ function BooksPreview() {
   const [books, setBooks] = useState([]);
   useEffect(()=>{
       axios
-          .get("http://localhost:8080/books-preview")
+          .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/books-preview`)
           .then((response)=>{
               setBooks(response.data);
           })

@@ -14,7 +14,7 @@ function Books() {
 
     useEffect(()=>{
       axios
-        .get("http://localhost:8080/books/children")
+        .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/books/children`)
         .then((response)=>{
           setChildrenBooks(response.data);
           setBooks(response.data);
@@ -23,7 +23,7 @@ function Books() {
 
     useEffect(()=>{
       axios
-        .get("http://localhost:8080/books/young-adult")
+        .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/books/young-adult`)
         .then((response)=>{
           setYoungAdultBooks(response.data);
         })

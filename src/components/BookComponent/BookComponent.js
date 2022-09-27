@@ -10,7 +10,7 @@ function BookComponent() {
 
     useEffect(()=>{
         axios
-          .get(`http://localhost:8080/books/book/${id}`)
+          .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/books/book/${id}`)
           .then((response)=>{
             setSelectedBook(response.data[0]);
           }) 
