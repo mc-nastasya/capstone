@@ -1,11 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
+import SuccessModal from "../SuccessModal/SuccessModal";
 import "./ContactForm.scss";
 
-function ContactForm({title, color}) {
-
-    const [success, setSuccess] = useState(false);
-    const [unsuccess, setUnsuccess] = useState(false);
+function ContactForm({title, color, setUnsuccess, setSuccess }) {
 
     const [firstNameValue, setFirstNameValue] = useState(true);
     const [emailValue, setEmailValue] = useState(true);
