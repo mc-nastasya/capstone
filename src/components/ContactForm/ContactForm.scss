@@ -106,4 +106,12 @@
             width: 48.1%;
         }
     }
+
+    &__error-state{
+        border: 1px solid #EB5757;
+        background-image: url('../../assets/icons/error.svg');
+        background-position: top 50% right .7rem;
+        background-repeat: no-repeat;
+
+    }
 }
