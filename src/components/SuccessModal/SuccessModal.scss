@@ -28,6 +28,10 @@
         box-shadow: 20px 4px 50px rgba(213, 213, 213, 0.38);
         border-radius: 25px;
         width: 328px;
+
+        @include desktop {
+            width: 500px;
+        }
     }
 
     &__cross {
