@@ -80,6 +80,12 @@
         background-image: url('../../assets/icons/chevron.svg');
         background-repeat: no-repeat;
         padding-left: 1.5rem;
+        cursor: pointer;
+
+        &:hover, &:active {
+            font-weight: 500;
+            font-style: italic;
+        }
     }
 
     &__back-link {
@@ -126,6 +132,7 @@
             width: 50%;
         }
 
+
         &--primary {
             @include primary-btn;
             color: $background;
@@ -134,17 +141,33 @@
             background-repeat: no-repeat;
             background-position: top .9rem left 20%;
 
+            &:hover, &:active {
+                background: url('../../assets/icons/Vector.svg') no-repeat top .9rem left 20%, linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-2;
+            }
+
+
             @include tablet {
                 background-position: top 1.2rem left 17%;
                 padding-left: 1.5rem;
+
+                &:hover, &:active {
+                    background: url('../../assets/icons/Vector.svg') no-repeat top 1.2rem left 17%, linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-2;
+                }
+
             }
         }
+
 
         &--secondary {
             @include secondary-btn;
             border: 1px solid $accent-2;
             color: $accent-2;
             background-color: $background;
+
+            &:hover, &:active {
+                border: 2px solid $accent-2;
+            }
+
         }
     }
 

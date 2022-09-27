@@ -43,6 +43,10 @@
         padding-right: 24px;
         margin: 1.5rem 0 4rem;
 
+        &:hover, &:active {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-3;
+        }
+
         @include tablet {
             padding-left: 36px;
             padding-right: 36px;

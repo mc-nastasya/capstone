@@ -39,5 +39,9 @@
         text-align: center;
         color: $accent-1;
         border: 1px solid $accent-1;
+
+        &:hover, &:active {
+            border: 2px solid $accent-1;
+        }
     }
 }

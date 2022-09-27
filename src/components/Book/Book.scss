@@ -42,5 +42,9 @@
         background-color: $white;
         display: block;
         text-align: center;
+
+        &:hover, &:active {
+            border: 2px solid $accent-1;
+        }
     }
 }

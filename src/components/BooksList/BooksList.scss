@@ -32,6 +32,7 @@
         border-radius: 8px;
         margin: 0;
         padding: .5rem;
+        cursor: pointer;
 
         @include desktop {
             border-radius: 16px;

@@ -93,6 +93,10 @@
         @include button;
         @include primary-btn;
 
+        &:hover, &:active {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-1;
+        }
+
         @include tablet {
             width: 244px;
             margin-top: 36px;
