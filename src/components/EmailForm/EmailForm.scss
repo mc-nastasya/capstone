@@ -165,6 +165,19 @@
 
         
     }
+
+    &__error {
+        color: #EB5757;
+        @include p2;
+    }
+
+    &__error-state{
+        border: 1px solid #EB5757;
+        background-image: url('../../assets/icons/error.svg');
+        background-position: top 1rem right .7rem;
+        background-repeat: no-repeat;
+
+    }
 }
 
 
