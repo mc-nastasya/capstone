@@ -182,6 +182,10 @@
         background-position: top 50% right .7rem;
         background-repeat: no-repeat;
 
+        &:hover {
+            border: 1px solid $error;
+        }
+
     }
 }
 

@@ -9,6 +9,7 @@ import BooksPage from "./pages/BooksPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
 import BookPage from "./pages/BookPage";
+import LogIn from "./components/LogIn/LogIn";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/books/children" element={<BooksPage section={true} />}/>
       <Route path="/books/young-adult" element={<BooksPage section={false} />}/>
       <Route path="/book/:id" element={<BookPage />} />
+      <Route path="/admin" element={<LogIn />} />
       <Route path="/*" element={<NotFoundPage />}/>
     </Routes>
     <Footer />

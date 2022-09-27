@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import SuccessModal from "../SuccessModal/SuccessModal";
 import "./ContactForm.scss";
 
 function ContactForm({title, color, setUnsuccess, setSuccess }) {
@@ -23,7 +22,7 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
             setFirstNameValue(false);
         }
 
-        if(!email || !email.includes("@")) {
+        if(!email.includes("@")) {
             setEmailValue(false);
         }
 
@@ -35,7 +34,7 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
             setMessageValue(false);
         }
 
-        if(!message || !firstName || !email || !subject) {
+        if(!message || !firstName || !email.includes("@") || !subject) {
             return ;
         }
 

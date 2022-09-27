@@ -17,7 +17,7 @@ function BooksPreview() {
   }, [])
 
   if(books === []) {
-      return <p>loading</p>
+      return <p>Loading...</p>
   }
 
   return (
