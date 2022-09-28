@@ -6,7 +6,7 @@ Eva Solska || Writer is a website-portfolio for the ukrainian author of books fo
 ## 🌟 About the Project
 In these days of digital technology, books are becoming increasingly unpopular and children are not reading them. I created a website for a Ukrainian children's and teenage book writer to promote reading and attract the attention of potential readers to Ukrainian literature.
 
-I made the site because I myself am part of these books. The writer is a friend of my family and we are all primary readers and do our part by giving feedback.
+I made the site because I myself am part of these books. The writer is a friend of my family and we all are primary readers and do our part by giving feedback.
 
 
 
