@@ -1,70 +1,112 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Eva Solska || Writer
 
-## Available Scripts
+Eva Solska || Writer is a website-portfolio for the ukrainian author of books for kids and teens.
 
-In the project directory, you can run:
+## 🌟 About the Project
+In these days of digital technology, books are becoming increasingly unpopular and children are not reading them. I created a website for a Ukrainian children's and teenage book writer to promote reading and attract the attention of potential readers to Ukrainian literature.
 
-### `npm start`
+I made the site because I myself am part of these books. The writer is a friend of my family and we are all primary readers and do our part by giving feedback.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tech Stack
 
-### `npm run eject`
+**Client:** React, SASS, HTML
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Server:** Node, Express, MySQL, Knex
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Responsive design
+- Add email address to subscribe to the books news
+- Fill the form to contact the author
+- Buy book on Amazon
+- Read a sample of the book
+- "/admin" path gives an opportunity to author to add a new book to website after logged in
+## Installation
+- ### Client Side
+    Clone this repo
+    ```bash
+    $ git clone git@github.com:mc-nastasya/capstone.git
+    ```
 
-## Learn More
+    Run npm install from inside the capstone directory.
+    ```bash
+    $ cd capstone
+    $ npm install
+    ```
+    Create .env file with 2 variables
+    ```bash
+    REACT_APP_PORT=<port>
+    REACT_APP_BASE_URL=<url>
+    ```
+    Run the app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm start
+    ```
+    
+- ### Server Side
+    Clone this repo
+    ```bash
+    $ git clone git@github.com:mc-nastasya/capstone-backend.git
+    ``` 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Run npm install from inside the capstone directory.
+    ```bash
+    $ cd capstone-backend
+    $ npm install
+    ```
 
-### Code Splitting
+    Create database using MySql, name it "evasolska"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Change user and password in knexfile.js
 
-### Analyzing the Bundle Size
+    Create tables in database
+    ```bash
+    $ npm run migrate
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Seed database
+    ```bash
+    $ npm run seed
+    ```
 
-### Making a Progressive Web App
+    Create .env file with 2 variables
+    ```bash
+    PORT=<port>
+    JWT_KEY=<jwt_key>
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    To get JWT_KEY run command and copy thw key from the terminal to .env file
+    ```bash
+    $ npm run key
+    ```
 
-### Advanced Configuration
+    Start the app
+    ```bash
+    $ npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Future updates
 
-### `npm run build` fails to minify
+- Add language switching (Ukrainian/English)
+- Courses page, Events page, Teachers and Librarians page
+- Auto-sending of the email after the customer fills contact form/question form
+- Buy course/ buy book functionality on the website
+- Filtering by format/language of the book
+- Auto-sending newest updates via email
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Web developer - Anastasiia Makarenko [@mc-nastasya](https://github.com/mc-nastasya)
+- Web designer - Anastasiia Filanovich
+
