@@ -25,6 +25,7 @@
 
     &__text {
         @include p2;
+        line-height: 150%;
     }
 
     &__question {

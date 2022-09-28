@@ -70,5 +70,10 @@
         border: none;
         background-color: $accent-4;
         color: $background;
+        cursor: pointer;
+
+        &:hover, &:active {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-4;
+        }
     }
 }

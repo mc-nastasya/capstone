@@ -45,7 +45,7 @@ function EmailForm() {
 
     return (
         <div className='email-form'>
-          {!success? null: <SuccessModal heading1='Great!' heading2='You successfully subscribed' text='Eva will send you the most important news!' setSuccess={setSuccess}/>}
+          {!success? null: <SuccessModal heading1='Great!' heading2='You successfully subscribed' text='Eva will send you the most important news!' button="Great!" setSuccess={setSuccess}/>}
           {!unsuccess? null : <UnsuccessModal setUnsuccess={setUnsuccess} />}
             <div className='email-form__top'></div>
             <div className='email-form__bottom-background'>

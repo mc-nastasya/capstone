@@ -97,6 +97,10 @@
             @include primary-btn;
             color: $background;
             background-color: $accent-2;
+
+            &:hover, &:active {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), $accent-2;
+            }
         }
 
         &--secondary {
@@ -104,6 +108,10 @@
             color: $accent-2;
             background-color: $background;
             border: 1px solid $accent-2;
+
+            &:hover, &:active {
+                border: 2px solid $accent-2;
+            }
         }
     }
 }

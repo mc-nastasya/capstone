@@ -44,6 +44,10 @@
         @include quote;
         color: $accent-text;
         text-align: center;
+
+        @include tablet {
+            margin: 2rem 0;
+        }
     }
 
     &__bottom {

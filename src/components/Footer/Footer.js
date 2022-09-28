@@ -15,10 +15,10 @@ function Footer() {
             <div className="footer__top">
                   <div className="footer__list-container">
                     <Link onClick={scrollToTop} className="footer__link" to='/books'><h3 className="footer__nav-item">Books</h3></Link>
+                    <Link onClick={scrollToTop} to='faq' className="footer__link"><h3 className="footer__nav-item">Author FAQ</h3></Link>
                   </div>
                   <div className="footer__list-container">
                     <Link onClick={scrollToTop} to='/about' className="footer__link"><h3 className="footer__nav-item">About Eva</h3></Link>
-                    <Link onClick={scrollToTop} to='faq' className="footer__link"><h3 className="footer__nav-item">Author FAQ</h3></Link>
                     <Link onClick={scrollToTop} to='contacts' className="footer__link"><h3 className="footer__nav-item">Contact Eva</h3></Link>
                   </div>
                   <div className="footer__social-container">

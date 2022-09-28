@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import SuccessModal from '../SuccessModal/SuccessModal';
 import UnsuccessModal from '../UnsuccessModal/UnsuccessModal';
-import './AdminForm.scss'
+import './AdminForm.scss';
 
 function AdminForm() {
   const [titleValue, setTitleValue] = useState(true);
@@ -12,9 +12,9 @@ function AdminForm() {
   const [success, setSuccess] = useState(false);
   const [unsuccess, setUnsuccess] = useState(false);
 
+
   const handleSubmit = (event) => {
       event.preventDefault();
-
       const title = event.target.title.value;
       const description= event.target.description.value;
       const link = event.target.link.value;
@@ -58,6 +58,7 @@ function AdminForm() {
           })
   }
 
+
   const handleClickTitle = () => {
     setTitleValue(true);
   }
@@ -72,7 +73,7 @@ function AdminForm() {
 
   return (
     <div className='admin-form'>
-      {!success? null: <SuccessModal heading1='Nice!' heading2='Books successfully added' text='You can add one more here.' setSuccess={setSuccess}/>}
+      {!success? null: <SuccessModal heading1='Nice!' heading2='Book successfully added' text='You can add one more here.' button="Add another book" setSuccess={setSuccess}/>}
       {!unsuccess? null : <UnsuccessModal setUnsuccess={setUnsuccess} />}
       <div className='admin-form__container'>
         <h1 className='admin-form__title'>Add new book</h1>
@@ -89,13 +90,11 @@ function AdminForm() {
               <label  className="admin-form__label" > Amazon link*</label>
               <input onClick={handleClickLink} type='text' name='link' className={`admin-form__input ${!linkValue && 'admin-form__error'}`} placeholder="https://amazon.com/your-book"/>
           </div>
-          <div className='admin-form__input-pair'>
-            <label> Children
-              <input type='radio' className='admin-form__radio' name='audience' value='children' defaultChecked/>
-            </label>
-            <label> Young-adult
-              <input type='radio' className='admin-form__radio' name='audience' value='young-adult' />
-            </label>
+          <div className='admin-form__input-pair admin-form__input-radio'>
+            <label className='admin-form__radio-label'><input type='radio' className='admin-form__radio' name='audience' value='children' defaultChecked/>
+            Children </label>
+            <label className='admin-form__radio-label'><input type='radio' className='admin-form__radio' name='audience' value='young-adult' />
+            Young-adult</label>
           </div>
           <button className='admin-form__button'>Add new book</button>
         </form>

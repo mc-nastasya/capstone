@@ -13,7 +13,7 @@ function ContactFormContainer({title, color}) {
   return (
     <div className='container__background'>
       <div className='container'>
-          {!success? null: <SuccessModal heading1='Nice!' heading2='Your letter was sent' text='Eva will get it soon and would happily answer you.' setSuccess={setSuccess}/>}
+          {!success? null: <SuccessModal heading1='Nice!' heading2='Your letter was sent' text='Eva will get it soon and would happily answer you.' button="Great!" setSuccess={setSuccess}/>}
           {!unsuccess? null : <UnsuccessModal setUnsuccess={setUnsuccess} />}
           <Profile />
           <ContactForm title={title} color={color} setSuccess={setSuccess} setUnsuccess={setUnsuccess}/>

@@ -2,7 +2,7 @@ import './SuccessModal.scss';
 import SuccessImage from "../../assets/images/success.png";
 import Cross from '../../assets/icons/cross.svg';
 
-function SuccessModal({heading1, heading2, text, setSuccess}) {
+function SuccessModal({heading1, heading2, text, button, setSuccess}) {
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -18,7 +18,7 @@ function SuccessModal({heading1, heading2, text, setSuccess}) {
                 <h2 className='success-modal__heading'>{heading2}</h2>
                 <p className='success-modal__text'>{text} </p>
             </div>
-            <button onClick={handleClick} className='success-modal__button'>Great!</button>
+            <button onClick={handleClick} className='success-modal__button'>{button}</button>
         </div>
     </div>
   )
