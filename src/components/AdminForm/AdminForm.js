@@ -5,21 +5,26 @@ import UnsuccessModal from '../UnsuccessModal/UnsuccessModal';
 import './AdminForm.scss';
 
 function AdminForm() {
+  //validation states
   const [titleValue, setTitleValue] = useState(true);
   const [descriptionValue, setDescriptionValue] = useState(true);
   const [linkValue, setLinkValue] = useState(true);
 
+  //states for modals
   const [success, setSuccess] = useState(false);
   const [unsuccess, setUnsuccess] = useState(false);
 
 
   const handleSubmit = (event) => {
       event.preventDefault();
+
       const title = event.target.title.value;
       const description= event.target.description.value;
       const link = event.target.link.value;
       const audince = event.target.audience.value;
 
+      //validation
+      //____________________
       if(!title) {
           setTitleValue(false);
       }
@@ -35,6 +40,8 @@ function AdminForm() {
       if(!title || !description || !link ) {
           return ;
       }
+      //validation ends
+      //____________________
 
       const newBook = {
           title: title,

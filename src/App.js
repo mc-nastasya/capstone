@@ -22,9 +22,9 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/faq" element={<FAQPage />}/>
       <Route path="/contacts" element={<ContactPage />}/>
-      <Route path="/books" element={<BooksPage section={true} />}/>
-      <Route path="/books/children" element={<BooksPage section={true} />}/>
-      <Route path="/books/young-adult" element={<BooksPage section={false} />}/>
+      <Route path="/books" element={<BooksPage />}/>
+      <Route path="/books/children" element={<BooksPage />}/>
+      <Route path="/books/young-adult" element={<BooksPage />}/>
       <Route path="/book/:id" element={<BookPage />} />
       <Route path="/admin" element={<LogIn />} />
       <Route path="/*" element={<NotFoundPage />}/>

@@ -4,6 +4,7 @@ import "./ContactForm.scss";
 
 function ContactForm({title, color, setUnsuccess, setSuccess }) {
 
+    //validation states
     const [firstNameValue, setFirstNameValue] = useState(true);
     const [emailValue, setEmailValue] = useState(true);
     const [subjectValue, setSubjectValue] = useState(true);
@@ -18,6 +19,8 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
         const subject = event.target.subject.value;
         const message = event.target.message.value;
 
+        //validation
+        //_____________________
         if(!firstName) {
             setFirstNameValue(false);
         }
@@ -37,6 +40,8 @@ function ContactForm({title, color, setUnsuccess, setSuccess }) {
         if(!message || !firstName || !email.includes("@") || !subject) {
             return ;
         }
+        //validation ends
+        //_____________________
 
         const newContact = {
             first_name: firstName,

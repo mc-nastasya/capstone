@@ -32,7 +32,7 @@ function LogIn() {
     }
 
     if(!password) {
-        setPasswordValue(false);
+      setPasswordValue(false);
     }
 
     if(!username || !password) {
@@ -56,11 +56,10 @@ function LogIn() {
           setErrorMessage(error.response.data.error.message);
           setPasswordValue(false);
           setUsernameValue(false);
-
-
         });
   };
 
+  //login form
   const renderLogin = () => (
     <div className='login'>
       <div className='login__container'>

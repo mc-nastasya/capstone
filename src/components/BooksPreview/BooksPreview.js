@@ -8,6 +8,8 @@ import {scrollToTop} from '../../utilities/utilities';
 function BooksPreview() {
 
   const [books, setBooks] = useState([]);
+
+  //get 4 books from the list of books in database
   useEffect(()=>{
       axios
           .get(`${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/books-preview`)
