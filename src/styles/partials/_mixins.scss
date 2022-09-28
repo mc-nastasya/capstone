@@ -1,4 +1,6 @@
 @use './sizes' as *;
+@use './colors' as *;
+@use './fonts' as *;
 
 @mixin desktop-center {
     max-width: 1240px;
@@ -57,10 +59,6 @@
     font-family: "Mail";
 }
 
-@mixin input-label {
-    font-size: 14px;
-    font-weight: 600;
-}
 
 @mixin input-placeholder {
     font-family: 'Mail';
@@ -77,5 +75,47 @@
     @include tablet {
         padding-top: 16px;
         padding-bottom: 16px;
+    }
+}
+
+@mixin label {
+    margin-top: -.85rem;
+    margin-left: .7rem;
+    background-color: $background;
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 600;
+    color: $secondary-text-1;
+    padding: .25rem;
+}
+
+@mixin error-input {
+    border: 1px solid $error;
+    background-image: url('../../assets/icons/error.svg');
+    background-position: top 50% right .7rem;
+    background-repeat: no-repeat;
+
+    &:hover {
+        border: 1px solid $error;
+    }
+}
+
+@mixin input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid $secondary-text-1;
+    border-radius: 12px;
+    position: relative;
+    outline: 0;
+    background-color: $background;
+    @include input-placeholder;
+
+    &:hover, &:focus, &:active{
+        border: 1px solid $accent-text;
+    }
+
+    &:focus, &:active{
+        background-image: none;
     }
 }

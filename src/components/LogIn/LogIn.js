@@ -6,6 +6,7 @@ import "./LogIn.scss";;
 
 function LogIn() {
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginError, setIsLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [usernameValue, setUsernameValue] = useState(true);
@@ -46,6 +47,7 @@ function LogIn() {
         .then((response) => {
           sessionStorage.setItem('JWTtoken', response.data.token);
 
+          setIsLoggedIn(true);
           setIsLoginError(false);
           setErrorMessage("");
         })
@@ -81,10 +83,11 @@ function LogIn() {
     </div>
   );
 
-  if (!sessionStorage.getItem("JWTtoken")) return renderLogin();
+  // Handle the Login
+  if (!sessionStorage.getItem("JWTtoken") && !isLoggedIn) return renderLogin();
 
   return (
-    <div className="App">
+    <div>
       <AdminForm />
     </div>
   );
