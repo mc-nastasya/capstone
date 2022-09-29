@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
 import BookPage from "./pages/BookPage";
 import LogIn from "./components/LogIn/LogIn";
+import Firebase from "./firebase/Firebase";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path="/books/young-adult" element={<BooksPage />}/>
       <Route path="/book/:id" element={<BookPage />} />
       <Route path="/admin" element={<LogIn />} />
+      <Route path="/exp" element={<Firebase />} />
       <Route path="/*" element={<NotFoundPage />}/>
     </Routes>
     <Footer />
